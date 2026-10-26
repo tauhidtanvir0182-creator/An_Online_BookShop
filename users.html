@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Customers | BookNest</title>
+
+    
+</head>
+
+<body>
+
+   
+    <header>
+        <div id="logo">
+            <a href="homepage.html">BookNest</a>
+        </div>
+
+        
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="users.html">Customers</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="homepage.html">Visit Shop</a></li>
+            </ul>
+        
+    </header>
+
+    <hr>
+    <main>
+
+        <section id="welcome">
+            <h1>Manage Customers</h1>
+            <p>View and manage BookNest customer records.</p>
+        </section>
+       <hr>
+        
+        <section id="summary">
+            <div class="sum1">
+                <h3>Total Customers</h3>
+                <input type="number" id="total" min="0" value="85">
+            </div>
+
+            <div class="sum1">
+                <h3>Active Customers</h3>
+                <input type="number" id="actv" min="0" value="78">
+            </div>
+
+            <div class="sum1">
+                <h3>Inactive Customers</h3>
+                <input type="number" id="inactv" min="0" value="7">
+            </div>
+        </section>
+        <hr>
+        <section id="customer">
+            <h2>Customer Records</h2>
+          <hr>
+            
+            <div id="table">
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>C001</td>
+                            <td>Rahim Ahmed</td>
+                            <td>rahim@example.com</td>
+                            <td>01712345678</td>
+                            <td>Active</td>
+                            <td>
+                          <button type="button" id="edit">Edit</button>
+                          <button type="button" id="delete">Delete</button>
+                           </td>
+                        </tr>
+
+                        <tr>
+                            <td>C002</td>
+                            <td>Nusrat Jahan</td>
+                            <td>nusrat@example.com</td>
+                            <td>01812345678</td>
+                            <td>Active</td>
+                            <td>
+                          <button type="button" id="edit">Edit</button>
+                          <button type="button" id="delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C003</td>
+                            <td>Tanvir Hasan</td>
+                            <td>tanvir@example.com</td>
+                            <td>01912345678</td>
+                            <td>Inactive</td>
+                            <td>
+                          <button type="button" id="edit">Edit</button>
+                          <button type="button" id="delete">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C004</td>
+                            <td>Samia Islam</td>
+                            <td>samia@example.com</td>
+                            <td>01612345678</td>
+                            <td>Active</td>
+                            <td>
+                          <button type="button" id="edit">Edit</button>
+                          <button type="button" id="delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+       
+        <section id="back">
+            <a href="admin.html">Back to Dashboard</a>
+        </section>
+
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Orders | BookNest</title>
+
+    
+</head>
+
+<body>
+
+    
+    <header>
+        <div id="logo">
+            <a href="homepage.html">BookNest</a>
+        </div>
+
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="users.html">Customers</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="homepage.html">Visit Shop</a></li>
+            </ul>
+       
+    </header>
+   <hr>
+    
+    <main>
+
+        <section id="welcome">
+            <h1>Manage Orders</h1>
+            <p>View customer orders and manage their delivery status.</p>
+        </section>
+        <hr>
+
+       
+        <section id="summary">
+
+            <div class="sum">
+                <h3>Total Orders</h3>
+                <input type="number" id="total" min="0" value="28">
+            </div>
+
+            <div class="sum">
+                <h3>Pending Orders</h3>
+                <input type="number" id="pend" min="0" value="12">
+            </div>
+
+            <div class="sum">
+                <h3>Confirmed Orders</h3>
+                <input type="number" id="con" min="0" value="18">
+            </div>
+
+            <div class="sum">
+                <h3>Delivered Orders</h3>
+                <input type="number" id="del" min="0" value="10">
+            </div>
+
+        </section>
+       <hr>
+      
+        <section id="list">
+
+            <h2>Customer Orders</h2>
+
+           <hr>
+
+            <div id="table">
+
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Order Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Update Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Rahim Ahmed</td>
+                            <td>18 Oct 2026</td>
+                            <td>৳1,000</td>
+                            <td>Pending</td>
+                            <td>
+                                <select name="status1">
+                                    <option>Pending</option>
+                                    <option>Confirmed</option>
+                                    <option>Shipped</option>
+                                    <option>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#1002</td>
+                            <td>Nusrat Jahan</td>
+                            <td>17 Oct 2026</td>
+                            <td>৳1,500</td>
+                            <td>Confirmed</td>
+                            <td>
+                                <select name="status2">
+                                    <option>Pending</option>
+                                    <option selected>Confirmed</option>
+                                    <option>Shipped</option>
+                                    <option>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#1003</td>
+                            <td>Tanvir Hasan</td>
+                            <td>16 Oct 2026</td>
+                            <td>৳800</td>
+                            <td>Shipped</td>
+                            <td>
+                                <select name="status3">
+                                    <option>Pending</option>
+                                    <option>Confirmed</option>
+                                    <option selected>Shipped</option>
+                                    <option>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#1004</td>
+                            <td>Samia Islam</td>
+                            <td>15 Oct 2026</td>
+                            <td>৳650</td>
+                            <td>Delivered</td>
+                            <td>
+                                <select name="status4">
+                                    <option>Pending</option>
+                                    <option>Confirmed</option>
+                                    <option>Shipped</option>
+                                    <option selected>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="back">
+            <a href="admin.html">Back to Dashboard</a>
+        </section>
+
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
