@@ -1,0 +1,151 @@
+
+/* External CSS */
+
+* {
+    background-color: #F5F0E6;
+}
+
+#mainheading {
+    color: #493323;
+    text-align: center;
+}
+
+#pageheading {
+    color: #70452A;
+    text-align: center;
+}
+
+#navigation {
+    text-align: center;
+}
+
+#navigation a {
+    color: #8B4513;
+}
+
+#searchform {
+    color: #493323;
+}
+
+#booktable {
+    color: #493323;
+    border: 2px solid #A68A64;
+}
+
+#booktable th {
+    background-color: #70452A;
+    color: #FFFFFF;
+}
+
+#booktable td {
+    background-color: #FFFDF8;
+    color: #493323;
+}
+
+#matilda {
+    color: #493323;
+}
+
+#tintin {
+    color: #493323;
+}
+
+#harrypotter {
+    color: #493323;
+}
+
+#wimpykid {
+    color: #493323;
+}
+
+#available {
+    color: #386641;
+}
+
+#available2 {
+    color: #386641;
+}
+
+#available3 {
+    color: #386641;
+}
+
+#outofstock {
+    color: #A12A2A;
+}
+
+#addheading {
+    color: #70452A;
+}
+
+#editheading {
+    color: #70452A;
+}
+
+#addform {
+    color: #493323;
+}
+
+#editform {
+    color: #493323;
+}
+
+#footertext {
+    color: #493323;
+}
+
+h2 {
+    color: #70452A;
+}
+
+p {
+    color: #493323;
+}
+
+a {
+    color: #8B4513;
+}
+
+label {
+    color: #493323;
+}
+
+input {
+    background-color: #FFFFFF;
+    color: #493323;
+}
+
+select {
+    background-color: #FFFFFF;
+    color: #493323;
+}
+
+option {
+    background-color: #FFFFFF;
+    color: #493323;
+}
+
+button {
+    background-color: #70452A;
+    color: #FFFFFF;
+}
+
+hr {
+    border: 1px solid #C8B89A;
+}
+
+#para2 {
+    color: #70452A;
+}
+
+#para3 {
+    color: #493323;
+    width: 350px;
+    padding: 50px;
+    border: 10px solid #A68A64;
+    margin: 0px;
+}
+
+.class1 {
+    color: #8B4513;
+}

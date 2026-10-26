@@ -1,0 +1,103 @@
+
+<html>
+<head>
+    <title>BookNest - Book Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="mainheading">BookNest</h1>
+    <h2 id="pageheading">Book Catalog</h2>
+
+    <div id="navigation">
+        <a href="books.html">Home</a>
+        <a href="book-details.html">Book Details</a>
+        <a href="add-editbook.html">Manage Books</a>
+    </div>
+
+    <hr>
+
+    <form id="searchform">
+        <label>Search Book:</label>
+        <input type="text" name="search" placeholder="Enter book title">
+
+        <label>Category:</label>
+        <select name="category">
+            <option>All Categories</option>
+            <option>Fiction</option>
+            <option>Comics</option>
+            <option>Fantasy</option>
+            <option>Comedy</option>
+            <option>Thriller</option>
+
+        </select>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <hr>
+
+    <table id="booktable" border="1">
+        <tr>
+            <th>Book Cover</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Status</th>
+          
+        </tr>
+
+        <tr>
+            <td><img src="https://bookmanager.com/i/m?b=YbuqOsBAiIopnIim5cIhAg" width="100"></td>
+            <td><center>Matilda</center></td>
+            <td><center>Roald Dahl</center></td>
+            <td><center>Fiction</center></td>
+            <td><center>500 BDT</center></td>
+            <td><center>10</center></td>
+            <td><center>Available</center></td>
+         
+        </tr>
+
+        <tr>
+            <td><img src="https://i.harperapps.com/hcuk/covers/9781405206280/x400.jpg?ph=harperreach_coming_soon.png" width="100"></td>
+            <td><center>The Adventures of Tintin - Explorers on the Moon</center></td>
+            <td><center>Hergé</center></td>
+            <td><center>Comics</center></td>
+            <td><center>400 BDT</center></td>
+            <td><center>5</center></td>
+            <td><center>Available</center></td>
+        </tr>
+
+        <tr>
+            <td><img src="https://static.wikia.nocookie.net/harrypotter/images/a/a3/Goblet_of_Fire_New_Cover.jpg/revision/latest?cb=20170109054633" width="100"></td>
+            <td><center>Harry Potter and the Goblet of Fire</center></td>
+            <td><center>J. K. Rowling</center></td>
+            <td><center>Fantasy</center></td>
+            <td><center>800 BDT</center></td>
+            <td><center>0</center></td>
+            <td><center>Out of Stock</center></td>
+        </tr>
+
+        <tr>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/8/84/Diary_of_a_Wimpy_Kid_book_cover.jpg" width="100"></td>
+            <td><center>Diary of a Wimpy Kid</center></td>
+            <td><center>Jeff Kinney</center></td>
+            <td><center>Comedy</center></td>
+            <td><center>450 BDT</center></td>
+            <td><center>20</center></td>
+            <td><center>Available</center></td>
+
+           
+        </tr>
+    </table>
+
+    <hr>
+
+    <p ><a href="add-editbook.html">Add or Edit Books</a></p>
+    <hr>
+    <footer>
+        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<html>
+<head>
+    <title>BookNest - Add and Edit Books</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <h1 id="mainheading">BookNest</h1>
+    <h2 id="pageheading">Add and Edit Books</h2>
+
+    <div id="navigation">
+        <a href="books.html">Home</a>
+        <a href="book-details.html">Book Details</a>
+        <a href="add-editbook.html">Manage Books</a>
+    </div>
+
+    <hr>
+
+    <h2 id="addheading">Add New Book</h2>
+
+    <form id="addform">
+        <label>Book Title:</label>
+        <input type="text" name="title" required>
+        <br><br>
+
+        <label>Author:</label>
+        <input type="text" name="author" required>
+        <br><br>
+
+        <label>Category:</label>
+        <select name="category" required>
+            <option>Fiction</option>
+            <option>Comics</option>
+            <option>Fantasy</option>
+            <option>Comedy</option>
+        </select>
+        <br><br>
+
+        <label>Price (BDT):</label>
+        <input  name="price" required>
+        <br><br>
+
+        <label>Stock:</label>
+        <input name="stock"  required>
+        <br><br>
+
+
+        <button type="submit">Add Book</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <hr>
+
+    <h2 id="editheading">Edit Existing Book</h2>
+
+    <form id="editform">
+        <label>Select Book:</label>
+        <select name="book" required>
+            <option> </option>
+            <option>Matilda</option>
+            <option>The Adventures of Tintin - Explorers on the Moon</option>
+            <option>Harry Potter and the Goblet of Fire</option>
+            <option>Diary of a Wimpy Kid</option>
+        </select>
+        <br><br>
+
+        <label>Remaining Quantity:</label>
+        <input name="quantity" required>
+        <br><br>
+
+        <label>Price (BDT):</label>
+        <input  name="price" >
+        <br><br>
+
+
+        <button type="submit">Update Book</button>
+        <button type="reset">Clear</button>
+    </form>
+
+    <hr>
+
+    <p><a href="books.html">Back to Book Catalog</a></p>
+   <hr>
+    <footer>
+        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+    </footer> 
+</body>
+</html>
