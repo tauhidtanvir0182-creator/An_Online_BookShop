@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F0E6;
+    margin: 20px;
+    color: #4E342E;
+}
+
+header {
+    background-color: #6F4E37;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #FFF8E7;
+    text-decoration: none;
+    margin: 10px;
+}
+
+main {
+    background-color: #FFFDF8;
+    padding: 20px;
+}
+
+h2 {
+    color: #6F4E37;
+    border-bottom: 2px solid #A67B5B;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #795548;
+}
+
+#cart div {
+    background-color: #F5E6D3;
+    border: 1px solid #D2B48C;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+input, textarea, select {
+    padding: 8px;
+    border: 1px solid #BCA18A;
+    border-radius: 4px;
+    background-color: #FFFDF8;
+    color: #4E342E;
+}
+
+button {
+    background-color: #8B5E3C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5D4037;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFDF8;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #D2B48C;
+}
+
+textarea {
+    width: 90%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 90%;
+}
+
+a {
+    color: #8B5E3C;
+}
+
+nav a {
+    color: #FFF8E7;
+}
+
+footer {
+    background-color: #6F4E37;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 10px;
+}

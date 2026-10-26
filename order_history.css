@@ -1,0 +1,44 @@
+
+body {
+    font-family: Arial;
+    background-color: #F5EBDD;
+    margin: 20px;
+}
+
+h1 {
+    background-color: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+h2 {
+    color: #6F4E37;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    background-color: #FFFDF8;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #6F4E37;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #D8C3A5;
+    padding: 10px;
+    text-align: left;
+}
+
+a {
+    color: #6F4E37;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8B4513;
+}
