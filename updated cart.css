@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F0E6;
+    margin: 20px;
+    color: #4E342E;
+}
+
+
+header {
+    background-color: #6F4E37;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+
+#store {
+    background-color: #6F4E37;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+
+
+nav {
+    background-color: #EADBC8;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #6F4E37;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #A67B5B;
+    text-decoration: underline;
+}
+
+
+main {
+    background-color: #FFFDF8;
+    padding: 20px;
+}
+
+h2 {
+    color: #6F4E37;
+    border-bottom: 2px solid #A67B5B;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #795548;
+}
+
+
+
+#cart div {
+    background-color: #F5E6D3;
+    border: 1px solid #D2B48C;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#cart div:hover {
+    background-color: #EEDCC5;
+}
+
+#stockMessage1,
+#stockMessage2 {
+    color: #795548;
+    font-weight: bold;
+}
+
+
+
+input,
+textarea,
+select {
+    padding: 8px;
+    border: 1px solid #BCA18A;
+    border-radius: 4px;
+    background-color: #FFFDF8;
+    color: #4E342E;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #8B5E3C;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+}
+
+textarea {
+    width: 90%;
+}
+
+
+
+button {
+    background-color: #8B5E3C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #5D4037;
+    transform: scale(1.05);
+}
+
+
+
+#registration {
+    background-color: #FFFDF8;
+    padding: 20px;
+}
+
+#registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFDF8;
+    border: 1px solid #D2B48C;
+}
+
+#registration-table td {
+    padding: 10px;
+    border: 1px solid #D2B48C;
+}
+
+#registration-table input {
+    width: 90%;
+}
+
+#registrationMessage {
+    color: red;
+    font-weight: bold;
+}
+
+#registrationSuccess {
+    color: green;
+    font-weight: bold;
+}
+
+/* Checkout */
+
+#checkout {
+    background-color: #FFFDF8;
+    padding: 20px;
+}
+
+#checkoutContent {
+    background-color: #FFFDF8;
+    padding: 10px;
+}
+
+#checkout-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFDF8;
+    border: 1px solid #D2B48C;
+}
+
+#checkout-table td {
+    padding: 10px;
+    border: 1px solid #D2B48C;
+}
+
+
+
+#message,
+#checkoutMessage,
+#registrationMessage {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#success,
+#checkoutSuccess,
+#registrationSuccess {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+a {
+    color: #8B5E3C;
+}
+
+a:hover {
+    color: #5D4037;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    background-color: #6F4E37;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    td {
+        padding: 7px;
+    }
+
+    input,
+    textarea,
+    select {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        margin: 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    #store {
+        font-size: 13px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    button {
+        padding: 8px 10px;
+    }
+
+    #registration-table input {
+        width: 100%;
+    }
+}
