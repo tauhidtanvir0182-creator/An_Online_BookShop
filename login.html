@@ -43,6 +43,18 @@
     <hr>
 
     <p align="center">BookNest - Your Trusted Online Bookstore</p>
+    <script>
+        loginForm.addEventListener("submit", function (event) {
+    const name = nameInput.value.trim();
+    const password = passwordInput.value.trim();
 
+    if (name === "" || password === "") {
+        event.preventDefault();
+        errorMessage.textContent = "You cannot keep empty fields.";
+    } else {
+        errorMessage.textContent = "";
+    }
+    });
+    </script>
 </body>
 </html>
