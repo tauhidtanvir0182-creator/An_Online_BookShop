@@ -4,58 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>BookNest | Review Inventory</title>
-    
+
+    <link rel="stylesheet" href="inventory.css">
+    <script src="inventory.js" defer></script>
 </head>
+
 <body>
 
     <header>
         <h1>BookNest Admin</h1>
-        <a href="admin.html">Back to Dashboard</a>
     </header>
 
     <main>
-        <h2>Review Inventory</h2>
-        <p>Check book availability and stock levels.</p>
+        <section id="welcome">
+            <h2>Review Inventory</h2>
+            <p>Check book availability and stock levels.</p>
+        </section>
 
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Book ID</th>
-                <th>Book Name</th>
-                <th>Category</th>
-                <th>Total Stock</th>
-                <th>Available Stock</th>
-                <th>Status</th>
-            </tr>
+        <hr>
+        <section id="summary">
 
-            <tr>
-                <td>B001</td>
-                <td>HTML and CSS</td>
-                <td>Web Development</td>
-                <td>25</td>
-                <td>18</td>
-                <td>In Stock</td>
-            </tr>
+            <div class="sum">
+                <h3>Total Books</h3>
+                <input type="number" id="total" value="0" readonly>
+            </div>
 
-            <tr>
-                <td>B002</td>
-                <td>Python Programming</td>
-                <td>Programming</td>
-                <td>15</td>
-                <td>3</td>
-                <td>Low Stock</td>
-            </tr>
+            <div class="sum">
+                <h3>In Stock</h3>
+                <input type="number" id="instock" value="0" readonly>
+            </div>
 
-            <tr>
-                <td>B003</td>
-                <td>Database Systems</td>
-                <td>Computer Science</td>
-                <td>20</td>
-                <td>0</td>
-                <td>Out of Stock</td>
-            </tr>
-        </table>
+            <div class="sum">
+                <h3>Low Stock</h3>
+                <input type="number" id="low" value="0" readonly>
+            </div>
+
+            <div class="sum">
+                <h3>Out of Stock</h3>
+                <input type="number" id="out" value="0" readonly>
+            </div>
+
+        </section>
+
+        <hr>
+        <section id="inventory">
+
+            <h2>Book Inventory</h2>
+
+            <div id="searchBox">
+
+                <input type="text" id="searchInput"
+                placeholder="Search ID, Book Name or Category">
+
+                <button type="button" id="searchBtn">Search</button>
+
+                <button type="button" id="resetBtn">Reset</button>
+
+            </div>
+
+            <p id="searchMessage"></p>
+
+            <hr>
+            <div id="table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Book ID</th>
+                            <th>Book Name</th>
+                            <th>Category</th>
+                            <th>Total Stock</th>
+                            <th>Available Stock</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>B001</td>
+                            <td>HTML and CSS</td>
+                            <td>Web Development</td>
+                            <td>25</td>
+                            <td class="available">18</td>
+                            <td class="stockStatus">In Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B002</td>
+                            <td>Python Programming</td>
+                            <td>Programming</td>
+                            <td>15</td>
+                            <td class="available">3</td>
+                            <td class="stockStatus">Low Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B003</td>
+                            <td>Database Systems</td>
+                            <td>Computer Science</td>
+                            <td>20</td>
+                            <td class="available">0</td>
+                            <td class="stockStatus">Out of Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B004</td>
+                            <td>Java Programming</td>
+                            <td>Programming</td>
+                            <td>30</td>
+                            <td class="available">12</td>
+                            <td class="stockStatus">In Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B005</td>
+                            <td>Data Structures</td>
+                            <td>Computer Science</td>
+                            <td>18</td>
+                            <td class="available">5</td>
+                            <td class="stockStatus">Low Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B006</td>
+                            <td>Artificial Intelligence</td>
+                            <td>Technology</td>
+                            <td>22</td>
+                            <td class="available">14</td>
+                            <td class="stockStatus">In Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B007</td>
+                            <td>Machine Learning</td>
+                            <td>Technology</td>
+                            <td>16</td>
+                            <td class="available">2</td>
+                            <td class="stockStatus">Low Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B008</td>
+                            <td>Operating Systems</td>
+                            <td>Computer Science</td>
+                            <td>12</td>
+                            <td class="available">0</td>
+                            <td class="stockStatus">Out of Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B009</td>
+                            <td>Introduction to Networking</td>
+                            <td>Networking</td>
+                            <td>24</td>
+                            <td class="available">9</td>
+                            <td class="stockStatus">In Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>B010</td>
+                            <td>Software Engineering</td>
+                            <td>Software Development</td>
+                            <td>10</td>
+                            <td class="available">4</td>
+                            <td class="stockStatus">Low Stock</td>
+                            <td>
+                                <button type="button" class="editBtn">Edit Stock</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="back">
+            <a href="admin.html">Back to Dashboard</a>
+        </section>
+
     </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
+

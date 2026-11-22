@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Registration | BookNest</title>
+
+    <link rel="stylesheet" href="admin-register.css">
+    <script src="admin-register.js" defer></script>
+</head>
+
+<body>
+
+    <div id="register">
+
+        <h1>BookNest</h1>
+        <h2>Admin Registration</h2>
+
+        <p>Create your admin profile to access the dashboard.</p>
+
+        <form id="registrationForm">
+
+            <h3>Admin Profile</h3>
+
+            <img id="profilePreview"
+                 src="D:\WEB TECH PROJECT\Images\profile.png"
+                 alt="Admin Profile Picture">
+
+            <br><br>
+
+            <label for="adminName">Full Name:</label>
+            <input type="text" id="adminName"
+                   placeholder="Enter your full name" required>
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone"
+                   placeholder="Enter phone number"
+                   required>
+            <br><br>
+
+            <label for="adminID">Admin ID / Username:</label>
+            <input type="text" id="adminID"
+                   placeholder="Create admin ID" required>
+            <br><br>
+
+            <label for="role">Admin Role:</label>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="Administrator">Administrator</option>
+                <option value="Inventory Manager">Inventory Manager</option>
+                <option value="Order Manager">Order Manager</option>
+            </select>
+            <br><br>
+
+            <label for="regPassword">Password:</label>
+            <input type="password" id="regPassword"
+                   placeholder="Create password"
+                   required>
+            <br><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword"
+                   placeholder="Confirm password" required>
+            <br><br>
+
+            <button type="button" id="messageBtn">
+                Add a Message
+            </button>
+
+            <div id="messageBox" class="hidden">
+
+                <h3>Additional Message</h3>
+
+                <textarea id="adminMessage"
+                          rows="5"
+                          placeholder="Write your message here..."></textarea>
+
+                <br><br>
+
+                <button type="button" id="closeMessage">
+                    Close
+                </button>
+
+            </div>
+
+            <br><br>
+
+            <label id="termsLabel">
+                <input type="checkbox" id="terms" required>
+                I agree to the Terms and Conditions
+            </label>
+
+            <br><br>
+
+            <button type="button" id="registerBtn">
+                Register
+            </button>
+           <p id="message"></p>
+
+        </form>
+
+        <p>Already have an account?
+            <a href="admin.html">Login here</a>
+        </p>
+
+        <p>
+            <a href="homepage.html">Back to BookNest</a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

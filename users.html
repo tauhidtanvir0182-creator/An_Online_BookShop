@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,59 +6,78 @@
 
     <title>Manage Customers | BookNest</title>
 
-    
+    <link rel="stylesheet" href="users.css">
+    <script src="users.js" defer></script>
 </head>
 
 <body>
 
-   
     <header>
         <div id="logo">
             <a href="homepage.html">BookNest</a>
         </div>
 
-        
-            <ul>
-                <li><a href="admin.html">Dashboard</a></li>
-                <li><a href="users.html">Customers</a></li>
-                <li><a href="orders.html">Orders</a></li>
-                <li><a href="homepage.html">Visit Shop</a></li>
-            </ul>
-        
+        <ul>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="users.html">Customers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="homepage.html">Visit Shop</a></li>
+        </ul>
     </header>
 
     <hr>
-    <main>
 
+    <main>
         <section id="welcome">
             <h1>Manage Customers</h1>
             <p>View and manage BookNest customer records.</p>
         </section>
-       <hr>
-        
+
+        <hr>
         <section id="summary">
+
             <div class="sum1">
                 <h3>Total Customers</h3>
-                <input type="number" id="total" min="0" value="85">
+                <input type="number" id="total" value="0" readonly>
             </div>
 
             <div class="sum1">
                 <h3>Active Customers</h3>
-                <input type="number" id="actv" min="0" value="78">
+                <input type="number" id="actv" value="0" readonly>
             </div>
 
             <div class="sum1">
                 <h3>Inactive Customers</h3>
-                <input type="number" id="inactv" min="0" value="7">
+                <input type="number" id="inactv" value="0" readonly>
             </div>
+
         </section>
+
         <hr>
         <section id="customer">
+
             <h2>Customer Records</h2>
-          <hr>
-            
+            <div id="searchBox">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search ID, Name or Email"
+                >
+
+                <button type="button" id="searchBtn">Search</button>
+
+                <button type="button" id="resetBtn">Reset</button>
+
+            </div>
+
+            <p id="searchMessage"></p>
+
+            <hr>
             <div id="table">
-                <table border="1" cellpadding="10">
+
+                <table>
+
                     <thead>
                         <tr>
                             <th>Customer ID</th>
@@ -72,39 +90,64 @@
                     </thead>
 
                     <tbody>
+
+                       
                         <tr>
                             <td>C001</td>
                             <td>Rahim Ahmed</td>
                             <td>rahim@example.com</td>
                             <td>01712345678</td>
-                            <td>Active</td>
+
                             <td>
-                          <button type="button" id="edit">Edit</button>
-                          <button type="button" id="delete">Delete</button>
-                           </td>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
                         </tr>
 
+                       
                         <tr>
                             <td>C002</td>
                             <td>Nusrat Jahan</td>
                             <td>nusrat@example.com</td>
                             <td>01812345678</td>
-                            <td>Active</td>
+
                             <td>
-                          <button type="button" id="edit">Edit</button>
-                          <button type="button" id="delete">Delete</button>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
                             </td>
                         </tr>
 
+                       
                         <tr>
                             <td>C003</td>
                             <td>Tanvir Hasan</td>
                             <td>tanvir@example.com</td>
                             <td>01912345678</td>
-                            <td>Inactive</td>
+
                             <td>
-                          <button type="button" id="edit">Edit</button>
-                          <button type="button" id="delete">Delete</button>
+                                <select class="status">
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive" selected>Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
                             </td>
                         </tr>
 
@@ -113,18 +156,142 @@
                             <td>Samia Islam</td>
                             <td>samia@example.com</td>
                             <td>01612345678</td>
-                            <td>Active</td>
+
                             <td>
-                          <button type="button" id="edit">Edit</button>
-                          <button type="button" id="delete">Delete</button>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
                             </td>
                         </tr>
+                        <tr>
+                            <td>C005</td>
+                            <td>Mahmud Karim</td>
+                            <td>mahmud@example.com</td>
+                            <td>01512345678</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive" selected>Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>C006</td>
+                            <td>Faria Chowdhury</td>
+                            <td>faria@example.com</td>
+                            <td>01798765432</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+
+                
+                        <tr>
+                            <td>C007</td>
+                            <td>Arif Hossain</td>
+                            <td>arif@example.com</td>
+                            <td>01898765432</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+
+        
+                        <tr>
+                            <td>C008</td>
+                            <td>Mehjabin Akter</td>
+                            <td>mehjabin@example.com</td>
+                            <td>01998765432</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active">Active</option>
+                                    <option value="Inactive" selected>Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C009</td>
+                            <td>Shakib Rahman</td>
+                            <td>shakib@example.com</td>
+                            <td>01698765432</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>C010</td>
+                            <td>Jannatul Ferdous</td>
+                            <td>jannatul@example.com</td>
+                            <td>01398765432</td>
+
+                            <td>
+                                <select class="status">
+                                    <option value="Active" selected>Active</option>
+                                    <option value="Inactive">Inactive</option>
+                                </select>
+                            </td>
+
+                            <td>
+                                <button type="button" class="editBtn">Edit</button>
+                                <button type="button" class="deleteBtn">Delete</button>
+                            </td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </section>
 
-       
         <section id="back">
             <a href="admin.html">Back to Dashboard</a>
         </section>
@@ -132,6 +299,7 @@
     </main>
 
     <hr>
+
     <footer>
         <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
     </footer>

@@ -253,3 +253,7 @@ footer {
 #backtotop:hover {
     background-color: #795548;
 }
+
+.hidden {
+    display: none;
+}

@@ -1,169 +1,350 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Manage Orders | BookNest</title>
+    <title>Manage Orders - BookNest</title>
 
-    
+    <link rel="stylesheet" href="orders.css">
+
+    <script src="orders.js" defer></script>
 </head>
 
 <body>
 
-    
-    <header>
-        <div id="logo">
-            <a href="homepage.html">BookNest</a>
-        </div>
+   <header>
 
-            <ul>
-                <li><a href="admin.html">Dashboard</a></li>
-                <li><a href="users.html">Customers</a></li>
-                <li><a href="orders.html">Orders</a></li>
-                <li><a href="homepage.html">Visit Shop</a></li>
-            </ul>
-       
-    </header>
-   <hr>
+    <div id="logo">
+        <a href="homepage.html">BookNest</a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="users.html">Customers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="homepage.html">Visit Shop</a></li>
+        </ul>
+    </nav>
+
+</header>
+
     
     <main>
 
-        <section id="welcome">
-            <h1>Manage Orders</h1>
-            <p>View customer orders and manage their delivery status.</p>
-        </section>
-        <hr>
-
-       
+        <h1>Manage Orders</h1>
+        
         <section id="summary">
 
-            <div class="sum">
-                <h3>Total Orders</h3>
-                <input type="number" id="total" min="0" value="28">
-            </div>
+            <h2>Order Summary</h2>
 
-            <div class="sum">
-                <h3>Pending Orders</h3>
-                <input type="number" id="pend" min="0" value="12">
-            </div>
+            <div class="cards">
 
-            <div class="sum">
-                <h3>Confirmed Orders</h3>
-                <input type="number" id="con" min="0" value="18">
-            </div>
+                <div class="card">
+                    <h3>Total Orders</h3>
+                    <input type="text" id="total" value="0" readonly>
+                </div>
 
-            <div class="sum">
-                <h3>Delivered Orders</h3>
-                <input type="number" id="del" min="0" value="10">
+                <div class="card">
+                    <h3>Pending</h3>
+                    <input type="text" id="pend" value="0" readonly>
+                </div>
+
+                <div class="card">
+                    <h3>Confirmed</h3>
+                    <input type="text" id="con" value="0" readonly>
+                </div>
+
+                <div class="card">
+                    <h3>Shipped</h3>
+                    <input type="text" id="shipped" value="0" readonly>
+                </div>
+
+                <div class="card">
+                    <h3>Delivered</h3>
+                    <input type="text" id="del" value="0" readonly>
+                </div>
+
             </div>
 
         </section>
-       <hr>
-      
+
+
+        <hr>
+
+
         <section id="list">
 
             <h2>Customer Orders</h2>
 
-           <hr>
 
+            
+            <div id="searchBox">
+
+                <input type="text"
+                       id="searchInput"
+                       placeholder="Search Order ID or Customer Name">
+
+                <button type="button" id="searchBtn">
+                    Search
+                </button>
+
+                <button type="button" id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+            <p id="searchMessage"></p>
+
+
+            
             <div id="table">
 
-                <table border="1" cellpadding="10">
+                <table>
+
                     <thead>
+
                         <tr>
                             <th>Order ID</th>
-                            <th>Customer</th>
+                            <th>Customer Name</th>
                             <th>Order Date</th>
-                            <th>Total</th>
+                            <th>Amount</th>
                             <th>Status</th>
                             <th>Update Status</th>
                         </tr>
+
                     </thead>
 
+
                     <tbody>
+
                         <tr>
-                            <td>#1001</td>
+                            <td>1001</td>
                             <td>Rahim Ahmed</td>
-                            <td>18 Oct 2026</td>
-                            <td>৳1,000</td>
-                            <td>Pending</td>
+                            <td>20 Nov 2026</td>
+                            <td>৳850</td>
+
+                            <td id="orderStatus1">Pending</td>
+
                             <td>
-                                <select name="status1">
-                                    <option>Pending</option>
-                                    <option>Confirmed</option>
-                                    <option>Shipped</option>
-                                    <option>Delivered</option>
+                                <select id="status1">
+                                    <option value="Pending" selected>Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered">Delivered</option>
                                 </select>
                             </td>
                         </tr>
 
+
                         <tr>
-                            <td>#1002</td>
+                            <td>1002</td>
                             <td>Nusrat Jahan</td>
-                            <td>17 Oct 2026</td>
-                            <td>৳1,500</td>
-                            <td>Confirmed</td>
+                            <td>20 Nov 2026</td>
+                            <td>৳1200</td>
+
+                            <td id="orderStatus2">Confirmed</td>
+
                             <td>
-                                <select name="status2">
-                                    <option>Pending</option>
-                                    <option selected>Confirmed</option>
-                                    <option>Shipped</option>
-                                    <option>Delivered</option>
+                                <select id="status2">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed" selected>Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered">Delivered</option>
                                 </select>
                             </td>
                         </tr>
 
+
+                   
                         <tr>
-                            <td>#1003</td>
+                            <td>1003</td>
                             <td>Tanvir Hasan</td>
-                            <td>16 Oct 2026</td>
-                            <td>৳800</td>
-                            <td>Shipped</td>
+                            <td>19 Nov 2026</td>
+                            <td>৳650</td>
+
+                            <td id="orderStatus3">Shipped</td>
+
                             <td>
-                                <select name="status3">
-                                    <option>Pending</option>
-                                    <option>Confirmed</option>
-                                    <option selected>Shipped</option>
-                                    <option>Delivered</option>
+                                <select id="status3">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped" selected>Shipped</option>
+                                    <option value="Delivered">Delivered</option>
                                 </select>
                             </td>
                         </tr>
 
+
+                      
                         <tr>
-                            <td>#1004</td>
+                            <td>1004</td>
                             <td>Samia Islam</td>
-                            <td>15 Oct 2026</td>
-                            <td>৳650</td>
-                            <td>Delivered</td>
+                            <td>19 Nov 2026</td>
+                            <td>৳1500</td>
+
+                            <td id="orderStatus4">Delivered</td>
+
                             <td>
-                                <select name="status4">
-                                    <option>Pending</option>
-                                    <option>Confirmed</option>
-                                    <option>Shipped</option>
-                                    <option selected>Delivered</option>
+                                <select id="status4">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered" selected>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>1005</td>
+                            <td>Fahim Rahman</td>
+                            <td>18 Nov 2026</td>
+                            <td>৳950</td>
+
+                            <td id="orderStatus5">Pending</td>
+
+                            <td>
+                                <select id="status5">
+                                    <option value="Pending" selected>Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered">Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        
+                        <tr>
+                            <td>1006</td>
+                            <td>Jannat Ara</td>
+                            <td>18 Nov 2026</td>
+                            <td>৳1100</td>
+
+                            <td id="orderStatus6">Confirmed</td>
+
+                            <td>
+                                <select id="status6">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed" selected>Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered">Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                      
+                        <tr>
+                            <td>1007</td>
+                            <td>Mehedi Hasan</td>
+                            <td>17 Nov 2026</td>
+                            <td>৳750</td>
+
+                            <td id="orderStatus7">Shipped</td>
+
+                            <td>
+                                <select id="status7">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped" selected>Shipped</option>
+                                    <option value="Delivered">Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                      
+                        <tr>
+                            <td>1008</td>
+                            <td>Farzana Akter</td>
+                            <td>17 Nov 2026</td>
+                            <td>৳1350</td>
+
+                            <td id="orderStatus8">Delivered</td>
+
+                            <td>
+                                <select id="status8">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered" selected>Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                     
+                        <tr>
+                            <td>1009</td>
+                            <td>Arif Hossain</td>
+                            <td>16 Nov 2026</td>
+                            <td>৳500</td>
+
+                            <td id="orderStatus9">Pending</td>
+
+                            <td>
+                                <select id="status9">
+                                    <option value="Pending" selected>Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered">Delivered</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                        
+                        <tr>
+                            <td>1010</td>
+                            <td>Sumaiya Noor</td>
+                            <td>16 Nov 2026</td>
+                            <td>৳1800</td>
+
+                            <td id="orderStatus10">Delivered</td>
+
+                            <td>
+                                <select id="status10">
+                                    <option value="Pending">Pending</option>
+                                    <option value="Confirmed">Confirmed</option>
+                                    <option value="Shipped">Shipped</option>
+                                    <option value="Delivered" selected>Delivered</option>
                                 </select>
                             </td>
                         </tr>
 
                     </tbody>
+
                 </table>
 
             </div>
 
         </section>
 
-        <section id="back">
+
+       
+        <div id="back">
+
             <a href="admin.html">Back to Dashboard</a>
-        </section>
+
+        </div>
 
     </main>
 
-    <hr>
+
+    
     <footer>
-        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+
+        <p>&copy; 2026 BookNest. All rights reserved.</p>
+
     </footer>
 
 </body>
+
 </html>
+

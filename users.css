@@ -208,3 +208,11 @@ footer {
     text-align: center;
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.12);
 }
+#searchInput {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c7b6a5;
+    border-radius: 5px;
+    font-family: inherit;
+}

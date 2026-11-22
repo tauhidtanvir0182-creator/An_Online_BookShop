@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f3eb;
+    color: #3e3026;
+}
+
+#register {
+    background-color: #efe2d0;
+    text-align: center;
+    padding: 30px 25px;
+    margin: 40px auto;
+    width: 650px;
+    max-width: 95%;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+#register h1 {
+    color: #5c4033;
+    font-size: 32px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+#register h2 {
+    color: #795548;
+}
+
+#register h3 {
+    color: #5c4033;
+    text-align: center;
+}
+
+#register form {
+    margin: 20px auto;
+    text-align: left;
+}
+
+#register form label {
+    display: inline-block;
+    width: 170px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+}
+
+#register form input:not([type="checkbox"]):not([type="file"]),
+#register form select {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #c7b6a5;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    vertical-align: middle;
+}
+
+#profilePreview {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #795548;
+    margin: 10px auto;
+    display: block;
+}
+
+#register input[type="file"] {
+    border: none;
+    padding: 5px;
+    width: auto;
+}
+
+#register input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+#termsLabel {
+    width: auto;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#register textarea {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #c7b6a5;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    resize: vertical;
+}
+
+button {
+    background-color: #795548;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+#register a {
+    color: #795548;
+    transition: color 0.3s;
+}
+
+#register a:hover {
+    color: #a0522d;
+}
+
+#messageBox {
+    background-color: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 400px;
+    max-width: 100%;
+    border: 1px solid #c7b6a5;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+#messageBox textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.hidden {
+    display: none;
+}
+

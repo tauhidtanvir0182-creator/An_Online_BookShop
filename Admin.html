@@ -7,11 +7,11 @@
 
     <title>Admin Dashboard | BookNest</title>
 
-    
+    <link rel="stylesheet" href="Admin.css">
+    <script src="Admin.js" defer></script>
 </head>
 
 <body>
-
     <div id="login">
         <h1>BookNest</h1>
         <h2>Admin Login</h2>
@@ -19,132 +19,141 @@
 
         <form action="#" method="post">
             <label for="admin">Admin ID:</label>
-            <input type="text" id="admin" name="admin" placeholder="Enter admin ID" required> <br> <br>
+            <input type="text" id="admin" name="admin"
+                   placeholder="Enter admin ID" required>
+            <br><br>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter password" required> <br> <br>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password" required>
+            <br><br>
 
-            <button type="submit">Login</button>
+            <button type="button" id="loginBtn">Login</button>
         </form>
+
+        <p>Don't have an admin account? 
+        <a href="admin-register.html">Register here</a>
+        </p>
 
         <p><a href="homepage.html">Back to BookNest</a></p>
     </div>
+    <div id="adminPanel" class="hidden">
 
-<header>      
-
-</div>
-
-        
+        <header>
             <ul>
                 <li><a href="admin.html">Dashboard</a></li>
                 <li><a href="users.html">Customers</a></li>
                 <li><a href="orders.html">Orders</a></li>
                 <li><a href="homepage.html">Visit Shop</a></li>
             </ul>
-        
-    </header>
-<hr>
-   
-    <main>
-
-        <section id="welcome">
-            <h1>Admin Dashboard</h1>
-            <p>Welcome back, Administrator!</p>
-            <p>Manage your bookstore and keep track of its activities.</p>
-        </section>
+        </header>
 
         <hr>
-        <section id="summary">
-            <h2>Shop Overview</h2> <hr>
 
-            <div id="cards">
+        <main>
 
-                <div class="card">
-                    <h3>Total Books</h3>
-                    <input type="number" id="total1" min="0" value="120">
-                    <a href="inventory.html">View Inventory</a>
-                </div>
+            <section id="welcome">
+                <h1>Admin Dashboard</h1>
+                <p>Welcome back, Administrator!</p>
+                <p>Manage your bookstore and keep track of its activities.</p>
+            </section>
 
-                <div class="card">
-                    <h3>Total Customers</h3>
-                    <input type="number" id="total2" min="0" value="85">
-                    <a href="users.html">Manage Customers</a>
-                </div>
-
-                <div class="card">
-                    <h3>Total Orders</h3>
-                    <input type="number" id="total3" min="0" value="46">
-                    <a href="orders.html">Manage Orders</a>
-                </div>
-
-                <div class="card">
-                    <h3>Total Sales</h3>
-                    <input type="number" id="total4" min="0" value="25000">
-                </div>
-
-          
-        </section>
-
-       
-        <section id="recent">
-            <hr>
-            <h2>Recent Orders</h2>
             <hr>
 
-            <table border="1" cellpadding="10">
-                <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Customer</th>
-                        <th>Total</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+            <section id="summary">
+                <h2>Shop Overview</h2>
+                <hr>
 
-                <tbody>
-                    <tr>
-                        <td>#1001</td>
-                        <td>Rahim Ahmed</td>
-                        <td>৳1,000</td>
-                        <td>Pending</td>
-                    </tr>
+                <div id="cards">
 
-                    <tr>
-                        <td>#1002</td>
-                        <td>Nusrat Jahan</td>
-                        <td>৳1,500</td>
-                        <td>Confirmed</td>
-                    </tr>
+                    <div class="card">
+                        <h3>Total Books</h3>
+                        <input type="number" id="total1" min="0" value="120">
+                        <a href="inventory.html">View Inventory</a>
+                    </div>
 
-                    <tr>
-                        <td>#1003</td>
-                        <td>Tanvir Hasan</td>
-                        <td>৳800</td>
-                        <td>Shipped</td>
-                    </tr>
-                </tbody>
-            </table>
+                    <div class="card">
+                        <h3>Total Customers</h3>
+                        <input type="number" id="total2" min="0" value="85">
+                        <a href="users.html">Manage Customers</a>
+                    </div>
 
-            <p id="all">
-                <a href="orders.html">View All Orders</a>
-            </p>
-        </section>
+                    <div class="card">
+                        <h3>Total Orders</h3>
+                        <input type="number" id="total3" min="0" value="46">
+                        <a href="orders.html">Manage Orders</a>
+                    </div>
 
-        
-        <section id="action">
-            <h2>Quick Actions</h2>
+                    <div class="card">
+                        <h3>Total Sales</h3>
+                        <input type="number" id="total4" min="0" value="25000">
+                    </div>
 
-            <a href="users.html">Manage Customers</a>
-            <a href="orders.html">Manage Orders</a>
-            <a href="inventory.html">Review Inventory</a>
-        </section>
+                </div>
 
-    </main>
+            </section>
+            <section id="recent">
 
-    <hr>
-    <footer>
-        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
-    </footer>
+                <hr>
+                <h2>Recent Orders</h2>
+                <hr>
+
+                <table border="1" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>Rahim Ahmed</td>
+                            <td>৳1,000</td>
+                            <td>Pending</td>
+                        </tr>
+
+                        <tr>
+                            <td>#1002</td>
+                            <td>Nusrat Jahan</td>
+                            <td>৳1,500</td>
+                            <td>Confirmed</td>
+                        </tr>
+
+                        <tr>
+                            <td>#1003</td>
+                            <td>Tanvir Hasan</td>
+                            <td>৳800</td>
+                            <td>Shipped</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p id="all">
+                    <a href="orders.html">View All Orders</a>
+                </p>
+
+            </section>
+            <section id="action">
+                <h2>Quick Actions</h2>
+
+                <a href="users.html">Manage Customers</a>
+                <a href="orders.html">Manage Orders</a>
+                <a href="inventory.html">Review Inventory</a>
+            </section>
+
+        </main>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
