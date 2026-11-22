@@ -10,17 +10,29 @@ h1 {
     color: white;
     text-align: center;
     padding: 15px;
+    position: sticky;
+    top: 0;
+    
 }
 
 h2 {
     color: #6F4E37;
     text-align: center;
+    text-shadow: 2px 2px 4px #D8C3A5;
+    transition: 0.3s;
+}
+
+h2:hover {
+    color: #8B4513;
+    text-shadow: 3px 3px 6px #B89B7A;
 }
 
 table {
     width: 100%;
     background-color: #FFFDF8;
     border-collapse: collapse;
+    border: 1px solid #D8C3A5;
+    padding: 10px;
 }
 
 th {
@@ -39,6 +51,59 @@ a {
     text-decoration: none;
 }
 
+#errorMessage {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+#successMessage {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+tr:hover {
+    background-color: #F5EBDD;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: #8B4513;
+}
+
+#successMessage:hover {
+    text-decoration: underline;
+}
+
+#errorMessage:hover {
+    text-decoration: underline;
+}
 a:hover {
-    color: #8B4513;
+    color: #701d1d;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }

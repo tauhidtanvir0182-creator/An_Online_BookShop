@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest | Order History</title>
+    <link rel="stylesheet" href="order_history.css">
+    <script src="order_history.js" defer></script>
+
 </head>
 <body>
 
     <h1>BookNest</h1>
     <h2>My Order History</h2>
 
-    <table border="1" cellpadding="10">
+    <table id="orderTable" >
         <tr>
             <th>Order ID</th>
             <th>Book Name</th>
@@ -35,9 +38,37 @@
             <td>৳600</td>
             <td>Pending</td>
         </tr>
+       
+        <tr>
+            <td>BN1003</td>
+            <td>JavaScript: The Good Parts</td>
+            <td>18 October 2026</td>
+            <td>৳750</td>
+            <td>Shipped</td>
+        </tr>
+    
+        <tr>
+            <td>BN1004</td>
+            <td>Python Crash Course</td>
+            <td>20 October 2026</td>
+            <td>৳800</td>
+            <td>Delivered</td>
+        </tr>
+
+        <tr>
+            <td>BN1005</td>
+            <td>Clean Code: A Handbook of Agile Software Craftsmanship</td>
+            <td>22 October 2026</td>
+            <td>৳900</td>
+            <td>Pending</td>
+        </tr>
+        
     </table>
 
-    <p><a href="cart.html">Back to Shopping</a></p>
+    <p id="errorMessage"></p>
+    <p id="successMessage"></p>
+
+    <a href="cart.html">Back to Shopping</a>
 
 </body>
 </html>
