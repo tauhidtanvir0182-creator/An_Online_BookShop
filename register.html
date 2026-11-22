@@ -63,6 +63,40 @@
     <hr>
 
     <p align="center">BookNest - Your Trusted Online Bookstore</p>
+    <script>
+          const registerForm = document.getElementById("registerForm");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const phoneInput = document.getElementById("phone");
+        const addressInput = document.getElementById("address");
+        const termsInput = document.getElementById("terms");
+        const errorMessage = document.getElementById("errorMessage");
+        
+        registerForm.addEventListener("submit", function(event) {
+
+            if (
+                nameInput.value.trim() === "" ||
+                emailInput.value.trim() === "" ||
+                passwordInput.value.trim() === "" ||
+                phoneInput.value.trim() === "" ||
+                addressInput.value.trim() === "" ||
+                termsInput.checked === false
+            ) {
+                event.preventDefault();
+                errorMessage.textContent = "You cannot keep empty fields.";
+            }
+            else {
+                errorMessage.textContent = "";
+            }
+        });
+        registerForm.addEventListener("input", function() {
+            errorMessage.textContent = "";
+        });
+        termsInput.addEventListener("change", function() {
+            errorMessage.textContent = "";
+        });
+    </script>
 
 </body>
 </html>
