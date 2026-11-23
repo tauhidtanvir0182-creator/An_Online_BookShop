@@ -1,97 +1,95 @@
 
-<html>
-<head>
-    <title>BookNest - Add and Edit Books</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 id="mainheading">BookNest</h1>
-    <h2 id="pageheading">Add and Edit Books</h2>
+document.addEventListener("DOMContentLoaded", function()
+{
+    document.getElementById("addform").addEventListener("submit", function(event)
+    {
+        let isValid = true;
 
-    <div id="navigation">
-        <a href="books.html">Home</a>
-        <a href="book-details.html">Book Details</a>
-        <a href="add-editbook.html">Manage Books</a>
-    </div>
+        document.getElementById("titleError").textContent = "";
+        document.getElementById("authorError").textContent = "";
+        document.getElementById("priceError").textContent = "";
+        document.getElementById("stockError").textContent = "";
 
-    <hr>
+        let title = document.getElementById("title").value.trim();
+        let author = document.getElementById("author").value.trim();
+        let price = document.getElementById("price").value.trim();
+        let stock = document.getElementById("stock").value.trim();
 
-    <h2 id="addheading">Add New Book</h2>
+        if (title === "") {
+            document.getElementById("titleError").textContent =
+                "Book Title is required.";
+            isValid = false;
+        }
 
-    <form id="addform">
-        <label>Book Title:</label>
-        <input type="text" id="title" name="title" required>
-        <p id="titleError"></p>
-        <br><br>
+        if (author === "") {
+            document.getElementById("authorError").textContent =
+                "Author is required.";
+            isValid = false;
+        }
 
-        <label>Author:</label>
-        <input type="text" id="author" name="author" required>
-        <p id="authorError"></p>
-        <br><br>
+        if (price === "" || isNaN(price) || Number(price) <= 0) {
+            document.getElementById("priceError").textContent =
+                "Enter a valid price.";
+            isValid = false;
+        }
 
-        <label>Category:</label>
-        <select id="category" name="category" required>
-            <option>Fiction</option>
-            <option>Comics</option>
-            <option>Fantasy</option>
-            <option>Comedy</option>
-        </select>
-        <br><br>
+        if (stock === "" || isNaN(stock) || Number(stock) < 0) {
+            document.getElementById("stockError").textContent =
+                "Enter a valid stock quantity.";
+            isValid = false;
+        }
 
-        <label>Price (BDT):</label>
-        <input type="text" id="price" name="price" required>
-        <p id="priceError"></p>
-        <br><br>
+        if (isValid === false) {
+            event.preventDefault();
+            return;
+        }
 
-        <label>Stock:</label>
-        <input type="text" id="stock" name="stock" required>
-        <p id="stockError"></p>
-        <br><br>
+        event.preventDefault();
 
-        <button type="submit">Add Book</button>
-        <button type="reset">Clear</button>
-    </form>
+        alert("Book added successfully.");
 
-    <hr>
+    });
 
-    <h2 id="editheading">Edit Existing Book</h2>
 
-    <form id="editform">
-        <label>Select Book:</label>
-        <select id="book" name="book" required>
-            <option value=""> </option>
-            <option>Matilda</option>
-            <option>The Adventures of Tintin - Explorers on the Moon</option>
-            <option>Harry Potter and the Goblet of Fire</option>
-            <option>Diary of a Wimpy Kid</option>
-        </select>
-        <p id="bookError"></p>
-        <br><br>
+    document.getElementById("editform").addEventListener("submit", function(event)
+    {
+        let isValid = true;
 
-        <label>Remaining Quantity:</label>
-        <input type="text" id="quantity" name="quantity" required>
-        <p id="quantityError"></p>
-        <br><br>
+        document.getElementById("bookError").textContent = "";
+        document.getElementById("quantityError").textContent = "";
+        document.getElementById("editpriceError").textContent = "";
 
-        <label>Price (BDT):</label>
-        <input type="text" id="editprice" name="price">
-        <p id="editpriceError"></p>
-        <br><br>
+        let book = document.getElementById("book").value;
+        let quantity = document.getElementById("quantity").value.trim();
+        let price = document.getElementById("editprice").value.trim();
 
-        <button type="submit">Update Book</button>
-        <button type="reset">Clear</button>
-    </form>
+        if (book === "") {
+            document.getElementById("bookError").textContent =
+                "Please select a book.";
+            isValid = false;
+        }
 
-    <hr>
+        if (quantity === "" || isNaN(quantity) || Number(quantity) < 0) {
+            document.getElementById("quantityError").textContent =
+                "Enter a valid quantity.";
+            isValid = false;
+        }
 
-    <p><a href="books.html">Back to Book Catalog</a></p>
+        if (price !== "" && (isNaN(price) || Number(price) <= 0)) {
+            document.getElementById("editpriceError").textContent =
+                "Enter a valid price.";
+            isValid = false;
+        }
 
-    <hr>
+        if (isValid === false) {
+            event.preventDefault();
+            return;
+        }
 
-    <footer>
-        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
-    </footer>
+        event.preventDefault();
 
-    <script src="manage.js"></script>
-</body>
-</html>
+        alert("Book updated successfully.");
+
+    });
+
+});
