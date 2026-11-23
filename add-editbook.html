@@ -20,15 +20,17 @@
 
     <form id="addform">
         <label>Book Title:</label>
-        <input type="text" name="title" required>
+        <input type="text" id="title" name="title" required>
+        <p id="titleError"></p>
         <br><br>
 
         <label>Author:</label>
-        <input type="text" name="author" required>
+        <input type="text" id="author" name="author" required>
+        <p id="authorError"></p>
         <br><br>
 
         <label>Category:</label>
-        <select name="category" required>
+        <select id="category" name="category" required>
             <option>Fiction</option>
             <option>Comics</option>
             <option>Fantasy</option>
@@ -37,13 +39,14 @@
         <br><br>
 
         <label>Price (BDT):</label>
-        <input  name="price" required>
+        <input type="text" id="price" name="price" required>
+        <p id="priceError"></p>
         <br><br>
 
         <label>Stock:</label>
-        <input name="stock"  required>
+        <input type="text" id="stock" name="stock" required>
+        <p id="stockError"></p>
         <br><br>
-
 
         <button type="submit">Add Book</button>
         <button type="reset">Clear</button>
@@ -55,23 +58,25 @@
 
     <form id="editform">
         <label>Select Book:</label>
-        <select name="book" required>
-            <option> </option>
+        <select id="book" name="book" required>
+            <option value=""> </option>
             <option>Matilda</option>
             <option>The Adventures of Tintin - Explorers on the Moon</option>
             <option>Harry Potter and the Goblet of Fire</option>
             <option>Diary of a Wimpy Kid</option>
         </select>
+        <p id="bookError"></p>
         <br><br>
 
         <label>Remaining Quantity:</label>
-        <input name="quantity" required>
+        <input type="text" id="quantity" name="quantity" required>
+        <p id="quantityError"></p>
         <br><br>
 
         <label>Price (BDT):</label>
-        <input  name="price" >
+        <input type="text" id="editprice" name="price">
+        <p id="editpriceError"></p>
         <br><br>
-
 
         <button type="submit">Update Book</button>
         <button type="reset">Clear</button>
@@ -80,9 +85,13 @@
     <hr>
 
     <p><a href="books.html">Back to Book Catalog</a></p>
-   <hr>
+
+    <hr>
+
     <footer>
         <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
-    </footer> 
+    </footer>
+
+    <script src="manage.js"></script>
 </body>
 </html>

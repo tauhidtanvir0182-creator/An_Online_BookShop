@@ -18,7 +18,9 @@
 
     <form id="searchform">
         <label>Search Book:</label>
-        <input type="text" name="search" placeholder="Enter book title">
+        <input type="text" id="searchBook" name="search" placeholder="Enter book title">
+
+        <p id="searchError"></p>
 
         <label>Category:</label>
         <select name="category">
@@ -28,7 +30,6 @@
             <option>Fantasy</option>
             <option>Comedy</option>
             <option>Thriller</option>
-
         </select>
 
         <button type="submit">Search</button>
@@ -45,7 +46,6 @@
             <th>Price</th>
             <th>Stock</th>
             <th>Status</th>
-          
         </tr>
 
         <tr>
@@ -56,7 +56,6 @@
             <td><center>500 BDT</center></td>
             <td><center>10</center></td>
             <td><center>Available</center></td>
-         
         </tr>
 
         <tr>
@@ -87,17 +86,18 @@
             <td><center>450 BDT</center></td>
             <td><center>20</center></td>
             <td><center>Available</center></td>
-
-           
         </tr>
     </table>
 
     <hr>
 
-    <p ><a href="add-editbook.html">Add or Edit Books</a></p>
+    <p><a href="add-editbook.html">Add or Edit Books</a></p>
     <hr>
+
     <footer>
         <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
