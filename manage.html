@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Manage Books</title>
+    <link rel="stylesheet" href="manage.css">
+</head>
+<body>
+
+    <div class="sticky-top">
+        <header>
+            <h1 id="mainheading">BookNest</h1>
+        </header>
+         <header>
+            <p class="tagline">Find your next favourite read.</p>
+        </header>
+
+        <nav>
+            <a href="books.html">Book Catalog</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="manage.html">Manage Books</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="page-intro">
+            <h2 id="pageheading">Book Management</h2>
+            <p>Add a new book or update the stock and price of an existing book.</p>
+        </div>
+
+        <button id="darkModeBtn" onclick="changeMode()">Dark Mode</button>
+
+        <section class="panel">
+            <h2 id="addheading">Add New Book</h2>
+
+            <form id="addform" novalidate>
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" name="title"
+                        placeholder="Enter book title">
+                        <p id="titleError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author"
+                        placeholder="Enter author name">
+                        <p id="authorError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="">Select a category</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Comics">Comics</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Comedy">Comedy</option>
+                        </select>
+                        <p id="categoryError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price (BDT)</label>
+                        <input type="number" id="price" name="price"
+                        placeholder="Example: 500">
+                        <p id="priceError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stock">Stock Quantity</label>
+                        <input type="number" id="stock" name="stock"
+                        placeholder="Example: 10">
+                        <p id="stockError" class="error-message"></p>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Add Book</button>
+                    <button type="reset" class="secondary-button">Clear Form</button>
+                </div>
+
+                <p id="addMessage" class="message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2 id="editheading">Update Existing Book</h2>
+
+            <form id="editform" novalidate>
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="book">Select Book</label>
+                        <select id="book" name="book">
+                            <option value="">Choose a book</option>
+                            <option value="Matilda">Matilda</option>
+                            <option value="The Adventures of Tintin - Explorers on the Moon">
+                                The Adventures of Tintin - Explorers on the Moon
+                            </option>
+                            <option value="Harry Potter and the Goblet of Fire">
+                                Harry Potter and the Goblet of Fire
+                            </option>
+                            <option value="Diary of a Wimpy Kid">
+                                Diary of a Wimpy Kid
+                            </option>
+                        </select>
+                        <p id="bookError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Remaining Quantity</label>
+                        <input type="number" id="quantity" name="quantity"
+                        placeholder="Enter new stock quantity">
+                        <p id="quantityError" class="error-message"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editprice">New Price (BDT)</label>
+                        <input type="number" id="editprice" name="editprice"
+                        placeholder="Leave blank to keep current price">
+                        <p id="editpriceError" class="error-message"></p>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Update Book</button>
+                    <button type="reset" class="secondary-button">Clear Form</button>
+                </div>
+
+                <p id="editMessage" class="message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <p>
+            <a class="button-link" href="books.html">Back to Catalog</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BookNest. All rights reserved.</p>
+    </footer>
+
+    <script src="manage.js"></script>
+</body>
+</html>

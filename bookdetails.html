@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Book Details</title>
+    <link rel="stylesheet" href="bookdetails.css">
+</head>
+<body>
+
+    <div class="sticky-top">
+        <header>
+            <h1 id="mainheading">BookNest</h1>
+        </header>
+         <header>
+            <p class="tagline">Find your next favourite read.</p>
+        </header>
+
+        <nav>
+            <a href="books.html">Book Catalog</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="manage.html">Manage Books</a>
+        </nav>
+    </div>
+
+    <main>
+        <div class="page-intro">
+            <h2 id="pageheading">Book Details</h2>
+            <p>View book information and current inventory status.</p>
+        </div>
+
+        <button id="darkModeBtn" onclick="changeMode()">Dark Mode</button>
+
+        <div class="details-grid">
+
+            <section class="panel book-detail">
+                <img class="detail-cover"
+                src="https://bookmanager.com/i/m?b=YbuqOsBAiIopnIim5cIhAg"
+                alt="Matilda book cover">
+
+                <div>
+                    <h2>Matilda</h2>
+                    <p><strong>Author:</strong> Roald Dahl</p>
+                    <p><strong>Category:</strong> Fiction</p>
+                    <p><strong>Price:</strong> 500 BDT</p>
+                    <p><strong>Stock:</strong> <span id="stock1">10</span></p>
+                    <p id="available" class="status available">Available</p>
+                </div>
+            </section>
+
+            <section class="panel book-detail">
+                <img class="detail-cover"
+                src="https://i.harperapps.com/hcuk/covers/9781405206280/x400.jpg?ph=harperreach_coming_soon.png"
+                alt="Tintin book cover">
+
+                <div>
+                    <h2>The Adventures of Tintin - Explorers on the Moon</h2>
+                    <p><strong>Author:</strong> Hergé</p>
+                    <p><strong>Category:</strong> Comics</p>
+                    <p><strong>Price:</strong> 400 BDT</p>
+                    <p><strong>Stock:</strong> <span id="stock2">5</span></p>
+                    <p id="available2" class="status available">Available</p>
+                </div>
+            </section>
+
+            <section class="panel book-detail">
+                <img class="detail-cover"
+                src="https://static.wikia.nocookie.net/harrypotter/images/a/a3/Goblet_of_Fire_New_Cover.jpg/revision/latest?cb=20170109054633"
+                alt="Harry Potter book cover">
+
+                <div>
+                    <h2>Harry Potter and the Goblet of Fire</h2>
+                    <p><strong>Author:</strong> J. K. Rowling</p>
+                    <p><strong>Category:</strong> Fantasy</p>
+                    <p><strong>Price:</strong> 800 BDT</p>
+                    <p><strong>Stock:</strong> <span id="stock3">0</span></p>
+                    <p id="available3" class="status out-of-stock">Out of Stock</p>
+                </div>
+            </section>
+
+            <section class="panel book-detail">
+                <img class="detail-cover"
+                src="https://upload.wikimedia.org/wikipedia/en/8/84/Diary_of_a_Wimpy_Kid_book_cover.jpg"
+                alt="Diary of a Wimpy Kid book cover">
+
+                <div>
+                    <h2>Diary of a Wimpy Kid</h2>
+                    <p><strong>Author:</strong> Jeff Kinney</p>
+                    <p><strong>Category:</strong> Comedy</p>
+                    <p><strong>Price:</strong> 450 BDT</p>
+                    <p><strong>Stock:</strong> <span id="stock4">8</span></p>
+                    <p id="available4" class="status available">Available</p>
+                </div>
+            </section>
+
+        </div>
+
+        <p>
+            <a class="button-link" href="books.html">Back to Catalog</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BookNest. All rights reserved.</p>
+    </footer>
+
+    <script src="details.js"></script>
+</body>
+</html>

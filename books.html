@@ -1,101 +1,136 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookNest - Book Catalog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="books.css">
 </head>
 <body>
-    <h1 id="mainheading">BookNest</h1>
-    <h2 id="pageheading">Book Catalog</h2>
+    <div class="sticky-top">
+        <header>
+            <h1 id="mainheading">BookNest</h1>
+            
+        </header>
+        <header>
+            <p class="tagline">Find your next favourite read.</p>
+        </header>
+        
 
-    <div id="navigation">
-        <a href="books.html">Home</a>
-        <a href="book-details.html">Book Details</a>
-        <a href="add-editbook.html">Manage Books</a>
+        <nav>
+            <a href="books.html">Book Catalog</a>
+            <a href="bookdetails.html">Book Details</a>
+            <a href="manage.html">Manage Books</a>
+        </nav>
     </div>
 
-    <hr>
+    <main>
+        <div class="page-intro">
+            <h2 id="pageheading">Book Catalog</h2>
+            <p>Explore books, check their prices and see current stock availability.</p>
+        </div>
 
-    <form id="searchform">
-        <label>Search Book:</label>
-        <input type="text" id="searchBook" name="search" placeholder="Enter book title">
+        <button id="darkModeBtn" onclick="changeMode()">Dark Mode</button>
 
-        <p id="searchError"></p>
+        <section class="panel search-panel">
+            <h2>Find a Book</h2>
 
-        <label>Category:</label>
-        <select id="searchCategory" name="category">
-            <option>All Categories</option>
-            <option>Fiction</option>
-            <option>Comics</option>
-            <option>Fantasy</option>
-            <option>Comedy</option>
-            <option>Thriller</option>
-        </select>
+            <form id="searchform" novalidate>
+                <div class="search-layout">
+                    <div class="form-group">
+                        <label for="searchBook">Book title or author</label>
+                        <input type="text" id="searchBook" name="search"
+                        placeholder="Search by title or author">
+                    </div>
 
-        <button type="submit">Search</button>
-    </form>
+                    <div class="form-group">
+                        <label for="searchCategory">Category</label>
+                        <select id="searchCategory" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Comics">Comics</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Comedy">Comedy</option>
+                        </select>
+                    </div>
 
-    <hr>
+                    <button type="submit">Search Books</button>
+                    <button type="button" class="secondary-button"
+                    id="showAllButton">Show All</button>
+                </div>
 
-    <table id="booktable" border="1">
-        <tr>
-            <th>Book Cover</th>
-            <th>Book Title</th>
-            <th>Author</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Status</th>
-        </tr>
+                <p id="searchMessage" class="message" aria-live="polite"></p>
+            </form>
+        </section>
 
-        <tr>
-            <td><img src="https://bookmanager.com/i/m?b=YbuqOsBAiIopnIim5cIhAg" width="100"></td>
-            <td><center>Matilda</center></td>
-            <td><center>Roald Dahl</center></td>
-            <td><center>Fiction</center></td>
-            <td><center>500 BDT</center></td>
-            <td><center>10</center></td>
-            <td><center>Available</center></td>
-        </tr>
+        <section class="panel">
+            <h2>Available Books</h2>
 
-        <tr>
-            <td><img src="https://i.harperapps.com/hcuk/covers/9781405206280/x400.jpg?ph=harperreach_coming_soon.png" width="100"></td>
-            <td><center>The Adventures of Tintin - Explorers on the Moon</center></td>
-            <td><center>Hergé</center></td>
-            <td><center>Comics</center></td>
-            <td><center>400 BDT</center></td>
-            <td><center>5</center></td>
-            <td><center>Available</center></td>
-        </tr>
+            <div class="table-wrap">
+                <table id="booktable">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
 
-        <tr>
-            <td><img src="https://static.wikia.nocookie.net/harrypotter/images/a/a3/Goblet_of_Fire_New_Cover.jpg/revision/latest?cb=20170109054633" width="100"></td>
-            <td><center>Harry Potter and the Goblet of Fire</center></td>
-            <td><center>J. K. Rowling</center></td>
-            <td><center>Fantasy</center></td>
-            <td><center>800 BDT</center></td>
-            <td><center>0</center></td>
-            <td><center>Out of Stock</center></td>
-        </tr>
+                    <tbody>
+                        <tr>
+                            <td><img class="book-cover"
+                            src="https://bookmanager.com/i/m?b=YbuqOsBAiIopnIim5cIhAg"
+                            alt="Matilda book cover"></td>
+                            <td>Matilda</td>
+                            <td>Roald Dahl</td>
+                            <td>Fiction</td>
+                            <td>500 BDT</td>
+                            <td><span class="status available">Available</span></td>
+                        </tr>
 
-        <tr>
-            <td><img src="https://upload.wikimedia.org/wikipedia/en/8/84/Diary_of_a_Wimpy_Kid_book_cover.jpg" width="100"></td>
-            <td><center>Diary of a Wimpy Kid</center></td>
-            <td><center>Jeff Kinney</center></td>
-            <td><center>Comedy</center></td>
-            <td><center>450 BDT</center></td>
-            <td><center>20</center></td>
-            <td><center>Available</center></td>
-        </tr>
-    </table>
+                        <tr>
+                            <td><img class="book-cover"
+                            src="https://i.harperapps.com/hcuk/covers/9781405206280/x400.jpg?ph=harperreach_coming_soon.png"
+                            alt="Tintin book cover"></td>
+                            <td>The Adventures of Tintin - Explorers on the Moon</td>
+                            <td>Hergé</td>
+                            <td>Comics</td>
+                            <td>400 BDT</td>
+                            <td><span class="status available">Available</span></td>
+                        </tr>
 
-    <hr>
+                        <tr>
+                            <td><img class="book-cover"
+                            src="https://static.wikia.nocookie.net/harrypotter/images/a/a3/Goblet_of_Fire_New_Cover.jpg/revision/latest?cb=20170109054633"
+                            alt="Harry Potter book cover"></td>
+                            <td>Harry Potter and the Goblet of Fire</td>
+                            <td>J. K. Rowling</td>
+                            <td>Fantasy</td>
+                            <td>800 BDT</td>
+                            <td><span class="status out-of-stock">Out of Stock</span></td>
+                        </tr>
 
-    <p><a href="add-editbook.html">Add or Edit Books</a></p>
-    <hr>
+                        <tr>
+                            <td><img class="book-cover"
+                            src="https://upload.wikimedia.org/wikipedia/en/8/84/Diary_of_a_Wimpy_Kid_book_cover.jpg"
+                            alt="Diary of a Wimpy Kid book cover"></td>
+                            <td>Diary of a Wimpy Kid</td>
+                            <td>Jeff Kinney</td>
+                            <td>Comedy</td>
+                            <td>450 BDT</td>
+                            <td><span class="status available">Available</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 BookNest Admin Panel. All rights reserved.</p>
+        <p>&copy; 2026 BookNest. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
