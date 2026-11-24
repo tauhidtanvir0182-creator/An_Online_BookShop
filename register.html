@@ -1,73 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>BookNest - Registration</title>
     <link rel="stylesheet" href="style1.css">
+<base target="self">
+
 </head>
 <body>
 
-    <h1 align="center"><i>BookNest</i></h1>
+    <div class="site-header">
+        <h1 align="center"><i>BookNest</i></h1>
 
-    <p align="center">Create your customer account</p>
+        <p align="center"><h2>Create your customer account</h2></p>
 
-    <hr>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">My Profile</a>
+        </nav>
 
-    <p align="center">
-        <a href="index.html">Home</a> |
-        <a href="register.html">Register</a> |
-        <a href="login.html">Login</a> |
-        <a href="profile.html">My Profile</a>
-    </p>
-
-    <hr>
+        <hr>
+    </div>
 
     <h2 class="class1">Customer Registration</h2>
 
-    <form id="registerForm" action="" method="get">
-         <fieldset style="width: 400px; padding: 20px; border: 2px solid black;">
-            <legend><b>Create Your Account</b></legend>
+    <div class="form-wrapper">
+        <form id="registerForm" action="" method="post">
 
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="full_name" required>
-        <br><br>
+            <fieldset style="width: 400px; padding: 20px; border: 2px solid black;">
+                <legend><b><h3>Create Your Account</h3></b></legend>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+                <label for="name"><b>Full Name:</b></label><br>
+                <input type="text" id="name" name="full_name" >
+                <br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
+                <label for="email"><b>Email:</b></label><br>
+                <input type="email" id="email" name="email" >
+                <br><br>
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone" required>
-        <br><br>
+                <label for="password"><B>Password:</B></label><br>
+                <input type="password" id="password" name="password">
+                <ul id="passwordError" style="color: #B22222;"></ul>
+                <br>
+                <label for="phone"><b>Phone Number:</b></label><br>
+                <input type="text" id="phone" name="phone" >
+                <br><br>
+                <label for="address"><b>Address:</b></label>
+                <br>
+                <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address"></textarea>
+                <br><br>
 
-        <label for="address">Address:</label>
-        <br><br>
+                <input type="checkbox" id="terms" name="terms" >
+                <label for="terms"><b>I agree to the terms and conditions.</b></label>
 
-        <textarea id="address" name="address" rows="4" cols="40" placeholder="Enter your address"></textarea>
+                <br><br>
+                <p id="errorMessage" style="color: #B22222;"></p>
 
-        <br><br>
+                <button type="submit" id="registerBtn">Register</button>
+            </fieldset>
+        </form>
+    </div>
 
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">I agree to the terms and conditions.</label>
-
-        <br><br>
-             <p id="errorMessage" style="color: red;"></p>
-
-        <button type="submit">Register</button>
-    </fieldset>
-    </form>
-
-    <p>Already have an account? <a href="login.html">Login here</a></p>
+    <p align="center">Already have an account? <a href="login.html">Login here</a></p>
 
     <hr>
 
     <p align="center">BookNest - Your Trusted Online Bookstore</p>
+
     <script>
-          const registerForm = document.getElementById("registerForm");
+        const registerForm = document.getElementById("registerForm");
         const nameInput = document.getElementById("name");
         const emailInput = document.getElementById("email");
         const passwordInput = document.getElementById("password");
@@ -75,7 +77,43 @@
         const addressInput = document.getElementById("address");
         const termsInput = document.getElementById("terms");
         const errorMessage = document.getElementById("errorMessage");
-        
+        const passwordError = document.getElementById("passwordError");
+
+        const NUMERIC_MESSAGE = "You cannot enter any numeric value in the 'Full name' field";
+        const digitPattern = /\d/;
+
+        nameInput.addEventListener("input", function (event) {
+            if (digitPattern.test(nameInput.value)) {
+                errorMessage.textContent = NUMERIC_MESSAGE;
+                event.stopImmediatePropagation();
+            }
+        });
+
+        function validatePassword() {
+            const pwd = passwordInput.value;
+            let failedRules = [];
+
+            if (pwd.length < 8) {
+                failedRules.push("The password should contain at least 8 characters.");
+            }
+
+            if (!/[a-z]/.test(pwd) || !/[A-Z]/.test(pwd)) {
+                failedRules.push("The password should have at least one lowercase and one uppercase letter.");
+            }
+
+            return failedRules;
+        }
+
+        function showPasswordErrors(failedRules) {
+            passwordError.innerHTML = "";
+
+            failedRules.forEach(function(rule) {
+                const li = document.createElement("li");
+                li.textContent = rule;
+                passwordError.appendChild(li);
+            });
+        }
+
         registerForm.addEventListener("submit", function(event) {
 
             if (
@@ -88,19 +126,34 @@
             ) {
                 event.preventDefault();
                 errorMessage.textContent = "You cannot keep empty fields.";
-            }
-            else {
+            } else {
                 errorMessage.textContent = "";
             }
+
+            if (digitPattern.test(nameInput.value)) {
+                event.preventDefault();
+                errorMessage.textContent = NUMERIC_MESSAGE;
+            }
+
+            const failedRules = validatePassword();
+
+            if (failedRules.length > 0) {
+                event.preventDefault();
+                showPasswordErrors(failedRules);
+            } else {
+                passwordError.innerHTML = "";
+            }
+
         });
+
         registerForm.addEventListener("input", function() {
             errorMessage.textContent = "";
+            passwordError.innerHTML = "";
         });
+
         termsInput.addEventListener("change", function() {
             errorMessage.textContent = "";
         });
     </script>
-
 </body>
 </html>
-
