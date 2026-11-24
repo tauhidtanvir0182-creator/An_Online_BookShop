@@ -1,0 +1,78 @@
+
+h1 {
+    color: #5C4033;
+    text-align: center;
+}
+
+h2 {
+    color: #795548;
+    text-align: center;
+}
+
+p {
+    color: #5C4033;
+}
+
+#para2 {
+    color: #795548;
+    text-align: center;
+}
+
+#para3 {
+    color: #5C4033;
+    width: 350px;
+    padding: 20px;
+    border: 2px solid #A67B5B;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.class1 {
+    color: #8B5E3C;
+}
+
+* {
+    background-color: #F5EBDD;
+}
+
+input {
+    background-color: #FFFDF8;
+    color: #4B3621;
+}
+
+textarea {
+    background-color: #FFFDF8;
+    color: #4B3621;
+}
+
+button {
+    background-color: #795548;
+    color: #FFF8EE;
+}
+
+a {
+    color: #8B5E3C;
+}
+
+table {
+    border-color: #A67B5B;
+    color: #4B3621;
+}
+
+th {
+    background-color: #795548;
+    color: #FFF8EE;
+}
+
+td {
+    background-color: #EFE0CC;
+    color: #4B3621;
+}
+
+label {
+    color: #5C4033;
+}
+
+hr {
+    border-color: #C4A484;
+}
